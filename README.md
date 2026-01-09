@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ CHATBOX (Multiple Device Realtime Chat Simulation Frontend)
 
-## Getting Started
+## 📌 Summary
 
-First, run the development server:
+CHATBOX is a frontend application designed to simulate real-time chat communication across multiple devices. This project demonstrates how realtime messaging systems work in practice, including instant message synchronization and data persistence even after the browser tab is closed.
+
+This project showcases realtime system design, WebSocket-based communication, and frontend–backend integration.
+
+## 🛠 Tech Stack
+
+- **Next.js** – React framework for modern frontend development and routing
+- **Tailwind CSS** – Utility-first CSS framework for fast and consistent UI styling
+- **LocalStorage** – Persists chat data locally to retain messages after closing the browser or tab
+- **Socket.IO Client** – Enables real-time communication with the WebSocket server
+
+## 🔗 Related Project (Realtime Socket Server)
+
+Since this application relies on real-time communication, it is connected to a dedicated WebSocket server built separately.
+
+**Socket Server: WS-CHATBOX**
+
+- **Runtime:** Node.js
+- **Framework:** Hono.js
+- **Realtime Provider:** Socket.IO
+
+**🔗 Server Repository:**  
+https://github.com/mhmdd-farhan/WS-CHATBOX
+
+This server is responsible for:
+
+- Managing real-time client connections
+- Broadcasting messages across multiple devices
+- Handling event-driven communication via WebSocket
+
+## ▶️ How to Run and Test the Project
+
+### 🔹 Prerequisites
+
+Make sure the following tools are installed on your local machine:
+
+- Node.js (v18+ recommended)
+- npm
+- Git
+
+### 🔹 Step 1: Clone and Run the Socket Server (WS-CHATBOX)
 
 ```bash
+# Clone the socket server repository
+git clone https://github.com/mhmdd-farhan/WS-CHATBOX.git
+
+# Navigate to the server directory
+cd WS-CHATBOX
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**📌 Note:**  
+Ensure the socket server is running before starting the frontend application, as the frontend depends on this realtime connection.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔹 Step 2: Clone and Run the Frontend Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the frontend repository
+git clone <FRONTEND_REPOSITORY_URL>
 
-## Learn More
+# Navigate to the frontend project directory
+cd <frontend-project-directory>
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run the development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Access the application via:  
+**http://localhost:3000**
 
-## Deploy on Vercel
+Open the app in multiple tabs or devices to observe realtime chat synchronization.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
+
+You are free to use, modify, and distribute this project for personal or commercial purposes.

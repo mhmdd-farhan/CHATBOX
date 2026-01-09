@@ -19,6 +19,43 @@
   }
 }
 
+@utility sender {
+  background: var(--senderchat);
+  border: var(--senderborder);
+  padding: 10px;
+}
+
+@utility receiver {
+  background: var(--receiverchat);
+  border: var(--receiverborder);
+  padding: 10px;
+}
+
+@utility input {
+  background: var(--senderchat);
+  border: var(--senderborder);
+  padding: 10px;
+}
+
+@utility swrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@utility rwrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@utility noscrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* @utility noscrollbar::-webkit-scrollbar {
+  display: none;
+} */
+
 body {
   background: var(--background);
   color: var(--foreground);

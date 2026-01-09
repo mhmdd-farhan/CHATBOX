@@ -80,8 +80,6 @@ npm run dev
 Access the application via:  
 **http://localhost:3000**
 
-Open the app in multiple tabs or devices to observe realtime chat synchronization.
-
 ## 📄 License
 
 This project is licensed under the MIT License.
